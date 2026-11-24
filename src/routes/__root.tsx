@@ -75,22 +75,35 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-    // Replace these placeholders with the app's name and description when first building the app.
-    // Each content route, / included, must still set its own head(). Never add og:image or
-    // twitter:image here: every page without its own would inherit the root's preview image.
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "DEATHBOUND — Dark Fantasy Blackjack Fighter" },
+      {
+        name: "description",
+        content:
+          "A dark-fantasy 2.5D fighting game powered by Blackjack combat mechanics.",
+      },
+      { property: "og:title", content: "DEATHBOUND — Dark Fantasy Blackjack Fighter" },
+      {
+        property: "og:description",
+        content:
+          "A dark-fantasy 2.5D fighting game powered by Blackjack combat mechanics.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Cinzel:wght@600;700;800;900&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
